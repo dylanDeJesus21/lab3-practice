@@ -7,17 +7,25 @@ int main(){
 
     int age;
     int graduated;
+    int elegAge;
 
-    cout << "You can enter the club if you are older than 18 and graduated from highschool" << endl;
+    cout << "You can enter the club if you are 18 or older, and graduated from highschool" << endl;
     
-    age = 20;
-    graduated = 1;
+    cout << "Enter age: ";
+    cin >> age;
+    
+    cout << "Enter if you are elegible or not (0/No, 1/Yes)";
+    cin >> graduated;
 
-    if (age > 18 && graduated  == 1){
+    if (age >= 18 && graduated  == 1){
 
         cout << "You are old enough to be admitted and have graduated. Welcome to the club!" << endl;
 
     }else{
-        cout << "You are not old enough or you have not graduated. Try again another year." << endl;
+
+        elegAge = 18 - age;
+
+        cout << "You are not old enough or you have not graduated. Try again in "<< elegAge <<" years." << endl;
+
     }
 }
